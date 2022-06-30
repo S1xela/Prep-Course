@@ -108,25 +108,25 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return num ^ 2
+  return Math.pow(num, 2)
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return num ^ 3
+  return Math.pow(num, 3)
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  return num ^ exponent
+  return Math.pow(num, exponent)
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  return Math.floor(num)
+  return Math.round(num)
 }
 
 function redondearHaciaArriba(num) {
@@ -146,7 +146,11 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  return ((numero > 0) && "positivo") || "negativo"
+  if(numero === 0) {
+    return false
+  }
+
+  return ((numero > 0) && "Es positivo") || "Es negativo"
 }
 
 function agregarSimboloExclamacion(str) {
@@ -195,7 +199,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  return euro / 1.20
+  return euro * 1.20
 }
 
 
@@ -211,7 +215,7 @@ function esVocal(letra){
 
   const vocals = {a: true, e: true, i: true, o: true, u: true}
 
-  return (vocals[letra] && "Es vocal") || "No es vocal"
+  return (vocals[letra] && "Es vocal") || "Dato incorrecto"
 }
 
 
